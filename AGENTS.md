@@ -160,7 +160,8 @@ biztalk_antigravity/
 ### STEP 4. 배포 준비
 - [x] GitHub 저장소 커밋 전 `.env` 누락 여부 확인
 - [x] Vercel 배포 설정 (`vercel.json` 등 필요 시 구성)
-- [ ] 원격 환경 동작 검증
+- [x] GitHub 원격 저장소(`origin/main`) 푸시 완료
+- [ ] Vercel 배포 및 원격 환경 동작 검증
 ------
 ### 5. @PRD_업무말투변환기.md 문서와 AGENTS.md 문서 항상 최신화 하기
 * 모든 변경사항이 발생하면 (예를 들어 기능이나 요구사항이 변경 되거나, 화면명세가 변경되거나, Source Code가 변경 되거나 라이브러리 버전이 변경되면) 관련된 markdown 문서들도 반드시 업데이트 합니다. 
