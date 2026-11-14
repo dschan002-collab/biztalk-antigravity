@@ -160,6 +160,7 @@ biztalk_antigravity/
 ### STEP 4. 배포 준비
 - [x] GitHub 저장소 커밋 전 `.env` 누락 여부 확인
 - [x] Vercel 배포 설정 (`vercel.json` 등 필요 시 구성)
+- [x] Vercel CLI 원클릭 자동 배포 스크립트 (`deploy.ps1`, `deploy.bat`, `package.json`) 작성 완료
 - [x] GitHub 원격 저장소(`origin/main`) 푸시 완료
 - [ ] Vercel 배포 및 원격 환경 동작 검증
 ------

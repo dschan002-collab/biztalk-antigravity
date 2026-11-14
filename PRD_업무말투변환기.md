@@ -495,14 +495,40 @@ uvicorn main:app --reload --port 8000
 # frontend/index.html을 브라우저에서 직접 열거나 VS Code Live Server 사용
 ```
 
-### Vercel 배포 설정
+### Vercel 배포 설정 (vercel.json)
 
 ```json
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    { "src": "backend/main.py", "use": "@vercel/python" },
+    { "src": "frontend/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "backend/main.py" },
+    { "src": "/health", "dest": "backend/main.py" },
+    { "src": "/docs", "dest": "backend/main.py" },
+    { "src": "/openapi.json", "dest": "backend/main.py" },
+    { "src": "/css/(.*)", "dest": "frontend/css/$1" },
+    { "src": "/js/(.*)", "dest": "frontend/js/$1" },
+    { "src": "/(.*)", "dest": "frontend/index.html" }
   ]
 }
+```
+
+### Vercel CLI 원클릭 자동 배포
+
+Vercel 웹사이트에 접속하지 않고 터미널에서 다음 스크립트 하나로 배포를 실행할 수 있습니다:
+
+```bash
+# PowerShell 스크립트 실행
+.\deploy.ps1
+
+# 또는 배치 파일 더블클릭
+deploy.bat
+
+# 또는 npm 스크립트
+npm run deploy
 ```
 
 ---
