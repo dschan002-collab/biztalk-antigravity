@@ -1,1 +1,22 @@
+# Environment variables
 .env
+.env.*
+
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
